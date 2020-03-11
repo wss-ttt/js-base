@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = new Number(11);
+    console.log(a);
+
+    var b = new Number('11');
+    console.log(b);
+
+    var c = new Number('aa');
+    console.log(c);
+    var d = Number('11');
+    console.log(d);
+    var e = Number('aa');
+    console.log(e);
+
+
+    var aa = new Num(11);
+    var bb = Num('22');
+    var cc = new Num('aa');
+    console.log(aa);
+    console.log(bb);
+    console.log(cc);
+    function Num(num){
+        this["[[PrimitiveValue]]"] = num;
+        return num/1;
+    }
+</script>
+</html>

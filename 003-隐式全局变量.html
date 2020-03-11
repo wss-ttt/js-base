@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function fn() {
+        var a = b = c = 1;          // b和c就是隐式全局变量（等号）
+        var d = 2; e = 2; f = 2;     // e和f就是隐式全局变量（分号）
+        var g = 3, h = 3, i = 3;    // h和i就不是隐式全局变量（逗号）
+    }
+
+    fn();
+    console.log(b); // 1
+    console.log(c); // 1
+    console.log(e); // 2
+    console.log(f); // 2 
+    console.log(h); // h is not defined
+    console.log(i); // i is not defined
+</script>
+
+</html>

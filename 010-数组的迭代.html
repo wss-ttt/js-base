@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = ['乔峰', '杨过', '小龙女'];
+    /* arr.every(function (item, index, arr) {
+        arr[index] = 'aa'
+        return true
+    });
+    console.log(arr) */
+    //对数组中每一项运行以下函数，如果都返回true，every返回true，如果有一项返回false，则停止遍历 every返回false；不写默认返回false
+    array.every(function (item, index, arr) {
+    })
+    //对数组中每一项运行以下函数，该函数返回结果是true的项组成的新数组
+    var arr = array.filter(function (item, index, arr) {
+    });
+    console.log(arr);
+    //遍历数组
+    array.forEach(function (item, index, arr) {
+    });
+    //对数组中每一项运行以下函数，返回该函数的结果组成的新数组
+    var arr = array.map(function (item, index, arr) {
+        return "\"" + item + "\"";
+    })
+    //对数组中每一项运行以下函数，如果该函数对某一项返回true，则some返回true
+    var b = array.some(function (item, index, arr) {
+        if (item == "ww") {
+            return true;
+        }
+        return false;
+    });
+
+</script>
+
+</html>

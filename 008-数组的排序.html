@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    var arr = [10, 30, 29, 93, 20, 32, 12];
+    /* arr.sort(function (a, b) {
+        return b - a;
+    });
+    console.log(arr); */
+    /* arr.sort(function (a, b) {
+        console.log(a, b);
+        return a - b;
+    }) */
+    // console.log(bubble(arr));
+
+    // 进行冒泡排序
+    /* bubble(arr);
+    console.log(arr);
+    function bubble(arr) {
+        // 1.外层控制轮数
+        for (var i = 0; i < arr.length - 1; i++) {
+            // 2.比较的次数
+            for (var j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // 交换
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    } */
+
+
+    // 在原型上添加自定义的排序方法
+    Array.prototype._sort = function (fn) {
+        for (var i = 0, len = this.length - 1; i < len; i++) {
+            for (var j = 0, jLen = this.length - 1; j < jLen; j++) {
+                if (this[j] > this[j + 1]) {
+                    var temp = this[j];
+                    this[j] = this[j + 1];
+                    this[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    Array.prototype.__sort = function (fn) {
+        for (var i = 0, len = this.length - 1; i < len; i++) {
+            for (var j = 0, jLen = this.length - 1; j < jLen; j++) {
+                if (fn(this[j], this[j + 1]) > 0) {
+                    var temp = this[j];
+                    this[j] = this[j + 1];
+                    this[j + 1] = temp;
+                }
+            }
+
+        }
+    }
+
+    arr.__sort(function (a, b) {
+        return a - b;
+        // return b - a;
+    });
+    console.log(arr);
+
+</script>
+
+</html>
